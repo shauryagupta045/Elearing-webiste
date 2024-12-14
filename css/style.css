@@ -9,7 +9,9 @@
 
 body{
     font-family: "Syne", sans-serif;
+    
 }
+
 
 .btn {
     background-color: #fb873f;
@@ -116,11 +118,11 @@ body{
 /*** Navbar ***/
 .navbar .dropdown-toggle::after {
     border: none;
-    content: "\f107";
+  
     font-family: "Syne", sans-serif;
     font-weight: 900;
     vertical-align: middle;
-    margin-left: 8px;
+    
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -265,15 +267,26 @@ body{
 .header-carousel .owl-nav {
     position: absolute;
     top: 50%;
-    right: 8%;
-    transform: translateY(-50%);
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 15px;
 }
+.header-carousel .owl-nav .owl-prev {
+    left: 0;
+    transform: translateX(15px);
+}
+
+.header-carousel .owl-nav .owl-next {
+    right: 0;
+    transform: translateX(-15px);
+}
+
 
 .header-carousel .owl-nav .owl-prev,
 .header-carousel .owl-nav .owl-next {
-    margin: 7px 0;
+    margin: 0;
     width: 45px;
     height: 45px;
     display: flex;
