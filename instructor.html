@@ -268,32 +268,33 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form>
+            <form class="apply-form" id="apply-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="95d645f3-5df3-4ad9-a3de-310a4d8524ae">
                 <h5 class="mb-4">Join SkillForge's Global Community
                     of Expert Instructors</h5>
                 <div class="row g-3">
                     <div class="col-md-6">
                         <div class="form-floating">
-                            <input type="text" class="form-control" id="f_name" placeholder="First Name">
+                            <input type="text" class="form-control" id="f_name" name="f_name" placeholder="First Name" required>
                             <label for="name">First Name</label>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-floating">
-                            <input type="text" class="form-control" id="l_name" placeholder="Last Name">
+                            <input type="text" class="form-control" id="l_name"  name="l_name" placeholder="Last Name" required>
                             <label for="name">Last Name</label>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-floating">
-                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
                             <label for="email">Your Email</label>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-floating">
-                            <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+                            <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
                             <label for="name">Phone Number</label>
                         </div>
                     </div>
@@ -301,7 +302,7 @@
                     <div class="col-12">
                         <div class="form-floating">
                             <label for="degree">What is the highest degree ?</label>
-                            <select name="degree" id="degree" class="form-control">
+                            <select name="degree" id="degree" class="form-control" required>
                             <option value="..">...</option>
                             <option value="High School">High School</option>
                             <option value="Undergraduate">Undergraduate</option>
@@ -314,7 +315,7 @@
                     <div class="col-12">
                         <div class="form-floating">
                             <label for="degree">What subject would you like to teach?</label>
-                            <select name="degree" id="degree" class="form-control">
+                            <select name="degree" id="degree" class="form-control" required>
                             <option value="..">...</option>
                             <option value="Technology">Technology</option>
                             <option value="Marketing">Marketing</option>
@@ -328,23 +329,23 @@
                     <div class="col-12">
                         <div class="form-floating">
                             <textarea class="form-control" placeholder="Leave a message here" id="address"
-                                style="height: 150px"></textarea>
+                                style="height: 150px" name="Address" required></textarea>
                             <label for="message">Address</label>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="">
-                            <input type="checkbox">
+                            <input type="checkbox" required>
                             I acknowledge and warrant the truthfulness of the information I submit, I also acknowledge that I have read, understand, and I agree with all Terms of service, and that I fully agree that all sales are final and that there are no refunds whatsoever.
                         </div>
                     </div>
                  
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn text-white">Apply</button>
+                </div>
             </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" class="btn text-white">Apply</button>
         </div>
       </div>
     </div>
