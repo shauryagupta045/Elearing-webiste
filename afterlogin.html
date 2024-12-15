@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SkillForge : Admin </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/icon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+<style>
+    /* Recently Viewed */
+    .recently-viewed {
+            margin: 40px 10%;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-family: "Kanit", sans-serif;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            font-family: "Kanit", sans-serif;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 12px;
+        }
+
+        .card-content h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 6px;
+            font-family: "Kanit", sans-serif;
+        }
+
+        .card-content p {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #0056d2;
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 20px;
+        }
+
+        .btn:hover {
+            background-color: #0044a4;
+        }
+
+        .search-bar input {
+            width: 300px;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-left: 75%;
+        }
+
+        .search-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #0056d2;
+            margin-left: -30px;
+        }
+</style>
+
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <p class="m-0 fw-bold" style="font-size: 25px;"><img src="img/icon.png" alt="" height="50px">Skill<span
+                    style="color: #fb873f;">Forge</span></p>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="developer.html" class="dropdown-item">Developed By</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle"><i class="fa fa-user"></i></a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="login.html" class="dropdown-item">Login</a>
+                        <a href="signup.html" class="dropdown-item">SignUp</a>
+                        <a href="adminlogin.html" class="dropdown-item">Login as Admin</a>
+
+                    </div>
+                </div>
+                <a href="#" class="nav-item nav-link">
+
+                <div id="google_translate_element">
+                </div>
+
+
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <div class="search-bar">
+        <input type="text" placeholder="What do you want to learn?">
+        <button>&#128269;</button>
+    </div>
+<!-- Recently Viewed Section -->
+<section class="recently-viewed">
+    <h2>Recently Viewed Products</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="https://via.placeholder.com/250x140" alt="Google Cloud">
+            <div class="card-content">
+                <p>Google Cloud</p>
+                <h3>Introduction to Generative AI Learning Path</h3>
+                <p>Specialization</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/250x140" alt="Google Course">
+            <div class="card-content">
+                <p>Google</p>
+                <h3>Google Prompting Essentials</h3>
+                <p>SkillForge</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/250x140" alt="IBM Course">
+            <div class="card-content">
+                <p>IBM</p>
+                <h3>Introduction to Web Development with HTML, CSS, JavaScript</h3>
+                <p>SkillForge</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/250x140" alt="Colorado University">
+            <div class="card-content">
+                <p>University of Colorado Boulder</p>
+                <h3>Bring Your Story to Life &ndash; Video Post-Production</h3>
+                <p>SkillForge</p>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="btn">Show 3 more</a>
+</section>
+
+
+
+
+
+
+
+    <!-- Footer Start -->
+ <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-4 col-md-6">
+                <h4 class="text-white mb-3">Quick Link</h4>
+                <p><a class="text-light" href="about.html">About Us</a></p>
+                <p><a class="text-light" href="contact.html">Contact Us</a></p>
+                <p><a class="text-light" href="PrivacyPolicy.html">Privacy Policy</a></p>
+                <p><a class="text-light" href="Termsandcondition.html">Terms & Condition</a></p>
+                <p><a class="text-light" href="contact.html">FAQs & Help</a></p>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h4 class="text-white mb-3">Contact</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Bulandshahar,UttarPradesh (203390)</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-8923003108</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>SkillForge@gmail.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <h4 class="text-white mb-3">Stay Updated: Subscribe to Our Newsletter</h4>
+                <p>Join our growing community of learners today by subscribing now and embracing lifelong education! </p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <form action="#">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="email"
+                            placeholder="Your email" required>
+                        <button type="submit"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"><a
+                                href="mailto:manish19464@gmail.com">Subscribe</a></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="index.html">SkillForge</a>, All Right Reserved.
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+    <!-- Footer End -->
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

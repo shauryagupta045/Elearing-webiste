@@ -625,7 +625,6 @@ body{
     border-right: none;
 }
 
-/* Base card styles */
 .hover-card {
     position: relative;
     overflow: hidden;
@@ -633,13 +632,12 @@ body{
     transition: background-color 0.3s ease;
 }
 
-/* Hover effect for background */
+
 .hover-card:hover {
-    background-color: #007bff; /* Change to your desired hover background color */
+    background-color: #007bff; 
     color: #fff;
 }
 
-/* Content container */
 .hover-content {
     position: relative;
     width: 100%;
@@ -652,7 +650,6 @@ body{
     overflow: hidden;
 }
 
-/* Before hover content styles */
 .before-hover {
     position: absolute;
     width: 100%;
@@ -664,7 +661,6 @@ body{
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* After hover content styles */
 .after-hover {
     position: absolute;
     width: 100%;
@@ -672,15 +668,15 @@ body{
     padding: 10px 15px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align lengthy text to the top */
+    justify-content: flex-start; 
     align-items: center;
     transform: translateX(-100%);
     opacity: 0;
-    overflow: auto; /* Enable scrolling for long text */
+    overflow: auto; 
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* Scrollbar styling */
+
 .after-hover::-webkit-scrollbar {
     width: 5px;
 }
@@ -692,7 +688,7 @@ body{
     background: #040404;
 }
 
-/* Hover effects */
+
 .hover-card:hover .before-hover {
     transform: translateX(100%);
     opacity: 0;
@@ -703,17 +699,15 @@ body{
     opacity: 1;
 }
 
-/* Text styling for the after-hover state */
 .after-hover p {
     margin: 0;
     font-size: 1rem;
     line-height: 1.5;
     color: #000000;
     font-weight: 400;
-    text-align: justify; /* Better readability for lengthy text */
+    text-align: justify; 
 }
 
-/* Social icons styling */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -722,12 +716,12 @@ body{
 }
 
 .icon-link {
-    color: #333; /* Default icon color */
+    color: #333; 
     transition: color 0.3s ease;
 }
 
 .icon-link:hover {
-    color: #007bff; /* Highlight color on hover */
+    color: #007bff; 
 }
 
 .header {

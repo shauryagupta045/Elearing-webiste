@@ -120,12 +120,12 @@ document.querySelector('.contact-form').addEventListener('submit', function (eve
       body: formData
     })
     .then(response => {
-      if (response.ok) { // Check if the HTTP response status is 200-299
+      if (response.ok) { 
         alert("Your message has been sent successfully. We'll respond shortly!");
-        form.reset(); // Reset form fields
+        form.reset(); 
       } else {
         return response.text().then(text => {
-          throw new Error(text); // Throw an error with response text
+          throw new Error(text); 
         });
       }
     })
